@@ -1,0 +1,64 @@
+// points
+	glBegin(GL_POINTS); // write shape u want to create
+	// setting up vertices . it can be 2D or 3D
+	glVertex3f(-0.5, 1.3, 0.0);
+	glEnd();
+
+	
+	//LINES
+	glBegin(GL_LINES); // write shape u want to create
+	// setting up vertices . it can be 2D or 3D
+	glVertex3f(-0.5, 1.2, 0.0);
+	glVertex3f(0.1, 1.2, 0.0);
+	glEnd();
+
+
+	//LINE STRIP
+	glBegin(GL_LINE_STRIP); // write shape u want to create
+	// setting up vertices . it can be 2D or 3D
+	glVertex3f(-0.5, 1, 0.0);
+	glVertex3f(0.2, 0.6, 0.0);
+	glVertex3f(0.2, 1, 0.0);
+	glVertex3f(-0.6, 0.6, 0.0);
+	glVertex3f(-0.7, 0.4, 0.0);
+	glEnd();
+
+	//LINE LOOP
+	glBegin(GL_LINE_LOOP); // write shape u want to create
+	// setting up vertices . it can be 2D or 3D
+	glVertex3f(-0.9, 1.3, 0.0);
+	glVertex3f(0, 1, 0.0);
+	
+	glEnd();
+
+
+	// GL_LINE_LOOP  
+	glBegin(GL_LINE_LOOP); // write shape u want to create 
+	
+	glVertex3f(0.5, -0.25, 0.0);
+	glVertex3f(0.35, -0.08, 0.0); 
+	glVertex3f(0.8, -0.08, 0.0);  
+	glVertex3f(1, -0.4, 0.0); 
+	glVertex3f(0.6, -0.5, 0.0);
+	glVertex3f(0.5, -0.25, 0.0); 
+	glEnd(); 
+
+// Quads
+	glBegin(GL_QUADS); // write shape u want to create 
+	
+	glVertex3f(-0.8, 0.5, 0.0);// v1 (-, -) 
+	glVertex3f(-0.8, 0.8, 0.0); // v2 (-, +) 
+	glVertex3f(-0.5, 0.8, 0.0); // v3(+, +) 
+	glVertex3f(-0.5, 0.5, 0.0); // v4(+, -) 
+	glEnd(); 
+
+
+
+
+	// GL_TRIANGLES
+	glBegin(GL_TRIANGLES); // write shape u want to create
+	glVertex3f(0.0, 0.0, 0); 
+	glVertex3f(-0.5, -0.3, 0); 
+	glVertex3f(0.5, -0.3, 0); 
+	glEnd(); 
+

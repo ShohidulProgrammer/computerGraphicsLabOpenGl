@@ -1,0 +1,51 @@
+#include <GL/glut.h>
+
+int angle = 0;
+void square (void) {
+	glColor3f(1.0, 0.5, 0.5); //this will set a color of the square.
+	glBegin(GL_LINE); // write shape u want to create
+	
+	glVertex3f(-0.5, -0.5, 0.0);
+	glVertex3f(-0.5, 0.5, 0.0);
+	glVertex3f(0.5, 0.5, 0.0);
+	glVertex3f(0.5, -0.5, 0.0);
+	glEnd();
+}
+
+void display (void) {
+glClear (GL_COLOR_BUFFER_BIT);
+glLoadIdentity();
+gluLookAt (0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+//glRotatef(angle, 1.0, 0.0, 0.0); //rotate on the x axis
+glRotatef(angle, 0.0, 1.0, 0.0); //rotate on the y axis
+//glRotatef(angle, 0.0, 0.0, 1.0); //rotate on the z axis
+glColor3f(1.0, 0.0, 0.0);
+glutWireCube(2);
+glFlush();
+angle += 1;
+
+}
+
+void reshape (int w, int h) {
+	glViewport (0, 0, (GLsizei)w, (GLsizei)h);
+	glMatrixMode (GL_PROJECTION);
+	glLoadIdentity ();  
+	gluPerspective (30, 1, 1.0, 100.0);
+	glMatrixMode (GL_MODELVIEW);
+
+}
+
+int main (int argc, char **argv) {
+    glutInit (&argc, argv);
+	glutInitDisplayMode (GLUT_SINGLE);
+	glutInitWindowSize (700, 700); 
+	glutInitWindowPosition (100, 100);
+    glutCreateWindow ("A basic OpenGL Window");
+    glutDisplayFunc (display);   
+	glutReshapeFunc (reshape);
+	glutIdleFunc (display);
+	
+    glutMainLoop ();
+    return 0;
+}
+

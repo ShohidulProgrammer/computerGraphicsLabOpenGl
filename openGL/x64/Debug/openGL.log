@@ -1,0 +1,2 @@
+﻿  main.cpp
+f:\study\programming\dextop base workplace source code\open gl computer graphics\opengl\main.cpp(3): fatal error C1083: Cannot open include file: 'GL\glew.h': No such file or directory

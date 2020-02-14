@@ -1,0 +1,4 @@
+mouse event: https://www.youtube.com/watch?v=JE09UNZapKk
+mouse motion: https://www.youtube.com/watch?v=vhL3WCLFK2I
+get cursor position: https://www.youtube.com/watch?v=TS41cDS28Hw
+mouse input: https://www.youtube.com/watch?v=EE5cS8EMT78
